@@ -1,153 +1,225 @@
 {
   box-sizing: border-box;
-  outline: 1px solid red; 
+  outline: 1px solid red;
 }
 
 /* TITLE */
 
-#title{
-  background: linear-gradient(235deg, rgb(9, 11, 138) ,rgb(34, 123, 175));
+#title {
   position: relative;
-
-}
-
-h1{
-  font-family: montserrat;
-  font-size: 3rem;
-  color: white;
-  padding-top: 3rem;
-  } 
-
-.container-fluid{
-  padding: 2% 12% 0 12%;
-}
-
-.navbar-brand{
-  font-size: larger;
-  font-family: 'Poppins', sans-serif;
-  filter: drop-shadow(10px 10px 10px rgba(32, 4, 107, 0.449));  
-}
-
-
-.navbar-button{
-  font-family: 'Raleway', sans-serif;
-}
-
-.navbar{
-  background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/04/Everest-minimalist-wallpaper-light.png);
-  background-position: right 200px top 600px;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp4892332.jpg&f=1&nofb=1);
+  background-repeat: no-repeat;
   background-size: cover;
-  margin: -2.6% -15.8%; 
-  padding: 1.3% 16%;
+  background-position: center;
+}
+
+.header-overlay {
+  width: auto;
+  height: auto;
+  background: linear-gradient(235deg, transparent, rgb(34, 123, 175));
   background-position: center center;
 }
 
-.nav-item{
+h1 {
+  font-family: montserrat;
+  font-size: 3rem;
+  color: white;
+
+}
+
+.container-fluid {
+  padding: 2% 12% 0 12%;
+}
+
+.navbar-brand {
+  font-size: larger;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.navbar-button {
+  font-family: 'Raleway', sans-serif;
+}
+
+
+.nav-item {
   padding: 0 10px;
 }
 
-.nav-link{
-font-size: 1.2rem;
-font-family: 'Raleway', sans-serif;
+.nav-link {
+  font-size: 1.2rem;
+  font-family: 'Raleway', sans-serif;
 }
 
-.padding-button{
-  margin: 10px 0 0 0 ;
+.padding-button {
+  margin: 10px 0 0 0;
   width: auto;
   font-family: Raleway;
 }
 
-#flexbox{
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
+.catch {
+  padding: 8% 0;
+  display: flex;
+  align-items: center;
+}
 
-.img-draw-fluid{
+.img-draw-fluid {
   max-width: 100%;
   height: auto;
-  filter: drop-shadow(10px 10px 10px rgba(0, 5, 31, 0.605));
+  filter: drop-shadow(10px 10px 10px rgba(0, 5, 31, 0.700));
+  z-index: 1;
 }
 
-@media (max-width: 1028px){
-  #title{
+.ipad {
+  transform: rotate(0);
+}
+
+.drawing {
+  margin: 0;
+}
+
+.mosaic {
+  display: grid;
+}
+
+.mosaic-item:first-of-type {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.mosaic-item:last-of-type {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+}
+
+@media (max-width: 992px) {
+  #title {
     text-align: center;
   }
-  .img-draw-fluid{
-    max-width: 70%;
-    float:none;
-    margin-bottom: 2%;
+
+  .img-draw-fluid {
+    max-width: 80%;
+    margin-top: 20px;
   }
-  
+
+  .catch {
+    padding: 10% 0;
+  }
+
+  .ipad {
+    transform: rotate(90deg);
+    margin: 15% 0 5%;
+  }
+
+  .drawing {
+    margin-top: 15%
+  }
 }
 
-@media only screen and(max-width: 768px){
+@media (max-width: 576px) {
 
-  .img-draw-fluid{
+  .img-draw-fluid {
     max-width: 80%;
-    float:none;
+    float: none;
     margin-bottom: 5%;
   }
-  #flexbox{
-    height: 70%;
+
+  h1 {
+    font-size: 2.50rem;
   }
-  h1{
-    font-size: 2.5rem;
-  }
-} 
+}
 
 /* FEATURES */
 
-#features{
+#features {
   background-color: whitesmoke;
   position: relative;
-  width: 100%;
-  height: 60%;
-  padding: 4% 15% 4% 15%;
-  z-index: 1;
+  padding: 8% 10%;
+  z-index: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 
-h3{
+h3 {
   font-family: montserrat;
-  font-size:x-large ;
+  font-size: x-large;
 }
 
-.p-color1{
-color:gray;
+.p-color1 {
+  color: gray;
 }
 
-.feature-margin{
+.feature-margin {
   text-align: center;
-  margin: 4% 0%;
+  margin: 3% 0%;
   padding: 0 5%;
+}
+
+.flaticon {
+  width: 50%;
+  margin: 7%;
+}
+
+.flaticon:hover {
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  25%,
+  55%,
+  75%,
+  100% {
+    transform: translateY(0);
   }
 
-.fa-color{
-  color: rgb(34, 123, 175);
-  margin-bottom: 10px;
-}
-.fa-color:hover{
-  color:  rgb(4, 5, 82);
-  transition: 500ms;
+  45% {
+    transform: translateY(-50px);
+  }
+
+  65% {
+    transform: translateY(-25px);
+  }
+
+  85% {
+    transform: translateY(-10px);
+  }
 }
 
+@media (max-width: 992px) {
+  #features {
+    padding: 5% 10%
+  }
+
+  .flaticon {
+    width: 25%;
+    margin: 5%;
+  }
+}
+
+@media (max-width: 576px) {}
 
 /* TESTIMONIAL */
 
-#testimonials{
+#testimonials {
   text-align: center;
   color: white;
-  background: linear-gradient(235deg, rgb(9, 11, 138) ,rgb(34, 123, 175));
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.wallpapersden.com%2Fimage%2Fdownload%2Fforest-minimal_amxraG2UmZqaraWkpJRsa21lrWloZ2U.jpg&f=1&nofb=1);
   background-size: cover;
   margin-bottom: 2%;
+  z-index: 1;
+  background-repeat: no-repeat;
 }
 
+.testimonial-overlay {
+  width: auto;
+  height: auto;
+  background: linear-gradient(235deg, rgba(9, 11, 138, 0.799), rgba(34, 123, 175, 0.687));
+  background-position: center center;
+}
 
 .h2-testi {
   font-size: 2rem;
@@ -155,12 +227,12 @@ color:gray;
   padding: 0 8%;
 }
 
-.carousel-item{
+.carousel-item {
   padding: 5% 15%;
   height: 500px;
 }
 
-.img-testi{
+.img-testi {
   width: 10%;
   height: auto;
   border-radius: 50%;
@@ -170,121 +242,164 @@ color:gray;
 }
 
 .press-class {
-width: 13%;
-margin-bottom: 5%;
-filter: drop-shadow(10px 10px 10px rgba(0, 5, 31, 0.582));
+  width: 13%;
+  margin-bottom: 5%;
+  filter: drop-shadow(10px 10px 10px rgba(0, 5, 31, 0.582));
 
 }
 
-@media (max-width: 1028px){
+@media (max-width: 1028px) {}
 
-  
-}
-
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .h2-testi {
     font-size: 1.5rem;
   }
-  .carousel-item{
+
+  .carousel-item {
     padding: 5% 15%;
     height: auto;
   }
+
   .press-class {
     width: 20%;
     margin-bottom: 5%;
     filter: drop-shadow(10px 10px 10px rgb(0, 5, 31));
   }
 
-} 
+}
 
 /* PRICING */
 
-#pricing{
-  padding: 2% 10% 0 10%;
+#pricing {
+  padding: 2% 10% 0;
   margin-bottom: 3%;
+  z-index: 0;
 }
 
 
-.h2-pricing{
+.h2-pricing {
   text-align: center;
   font-family: montserrat;
   font-size: 3rem;
 }
 
-.p-pricing{
+.p-pricing {
   text-align: center;
   margin-bottom: 3%;
 }
 
-.card{
+.card {
   height: 375px;
   filter: drop-shadow(10px 10px 10px rgba(0, 5, 31, 0.351));
+  border-radius: 15px;
 }
 
-.card-title{
+.card-title {
   font-size: 2rem;
 }
 
-.card-img-top{
-  background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/04/Everest-minimalist-wallpaper-light.png);
-  background-position: left 150px top 50%;
+.card-img-top {
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp4892332.jpg&f=1&nofb=1);
+  background-position: center;
   background-size: cover;
   text-align: center;
   padding: 2.5% 0%;
   font-size: 2rem;
   margin-bottom: 20px;
+  border-radius: 15px 15px 0 0;
+  color: rgb(255, 255, 255);
 }
 
-p{
+p {
   margin: .5% 0;
 }
 
-.cardfooter{
+.cardfooter {
   padding: 0% 5%;
   height: 15%;
 }
 
-.button-payment-free{
-    color:rgb(9, 11, 138);
-    background-color: transparent;
-    border-color: rgb(9, 11, 138);
-    border: 1px solid ;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem;
-    width: 100%;
-    height: auto;
-    margin-bottom: 2%;
-    transition: 250ms; 
-}
-
-.button-payment-free:hover{
-  color: White;
-  background-color:rgb(9, 11, 138);
-  border-color:rgb(9, 11, 138);
-  transition: 250ms;  
-}
-
-.button-payment{
-  color: White;
-  background-color:rgb(9, 11, 138);
-  border-color:rgb(9, 11, 138);
-  border: 1px solid ;
-  padding: 0.375rem 0.75rem;
+.gradient-button {
+  font-family: Raleway;
   font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  width: 100%;
-  height: auto;
-  margin-bottom: 2%;
-  transition: 250ms; 
-  
+  text-align: center;
+  text-transform: uppercase;
+  background-size: 200% auto;
+  padding: 0.500rem 0.75rem;
+  margin-bottom: 4%;
+  border: none;
+  border-radius: 10px;
+  transition: all 500ms cubic-bezier(.25, .8, .25, 1);
+}
+.gradient-button:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin: 3px 2px;
+}
+.gradient-button-2 {
+  background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6 51%, #2BC0E4 100%)
+}
+.gradient-button-2:hover {
+  background-position: right center;
 }
 
-.button-payment:hover{
-color: rgb(9, 11, 138);
-background-color: transparent;
-border-color: rgb(9, 11, 138);
-transition: 250ms;  
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 576px) {
+
+}
+
+/* CTA */
+
+#cta {
+  background-image: url(/Project/images/kv3o721sr2u51.webp);
+  background-position: top 1200px center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  width: auto;
+  height: auto;
+  background: linear-gradient(235deg, rgba(9, 11, 138, 0.72), rgba(34, 123, 175, 0.462));
+  background-position: center center;
+
+}
+
+.cta-text {
+  padding: 10% 10% 10% 10%;
+  text-shadow: 2px 2px rgba(16, 22, 53, 0.632);
+}
+
+.padding-button-cta {
+  margin: 2% .5% 0%;
+  width: auto;
+}
+
+#footer {
+  text-align: center;
+  margin: 5% 10%;
+}
+
+
+.fab-margin {
+  margin: 0px 10px;
+}
+
+.p-margin {
+  margin: 2%;
+  color: gray;
+  font-family: Raleway;
+}
+
+a {
+  color: rgb(16, 15, 15);
+}
+
+a:hover {
+  color: rgb(9, 11, 138);
 }
